@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}openLMS{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/open-lms-base.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap-theme.min.css') }}">
+    {% endblock %}
+    {% block javascripts %}
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/jquery-1.12.1.min.js') }}"></script>
+    {% endblock %}
+</head>
+<body>
+
+<header>
+    <h1 id="logo">openLMS</h1>
+</header>
+
+<div id="base-container" class="container clear-fix">
+    {% block content %}
+    {% endblock %}
+</div>
+<script>
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1) {
+            $('header').addClass("sticky");
+        }
+        else {
+            $('header').removeClass("sticky");
+        }
+    });
+</script>
+</body>
+</html>
