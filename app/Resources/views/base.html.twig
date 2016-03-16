@@ -5,34 +5,60 @@
     <title>{% block title %}openLMS{% endblock %}</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('css/open-lms-base.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap-theme.min.css') }}">
-    {% endblock %}
-    {% block javascripts %}
-        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('js/jquery-1.12.1.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('css/open-lms-base.css') }}">
     {% endblock %}
 </head>
 <body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ path('homepage') }}">openLMS</a>
+        </div>
 
-<header>
-    <h1 id="logo">openLMS</h1>
-</header>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ path('homepage') }}">Home</a></li>
+                <li><a href="{{ path('homepage') }}">Courses</a></li>
+                <li class="dropdown">
+                    <a href="{{ path('homepage') }}" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true"
+                       aria-expanded="false">
+                        Trainings <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ path('homepage') }}">Home link</a></li>
+                        <li><a href="{{ path('homepage') }}">Home link</a></li>
+                        <li><a href="{{ path('homepage') }}">Home link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ path('homepage') }}">Home link</a></li>
+                        <li><a href="{{ path('homepage') }}">Home link</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ path('homepage') }}">My Learning</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-<div id="base-container" class="container clear-fix">
-    {% block content %}
-    {% endblock %}
-</div>
-<script>
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 1) {
-            $('header').addClass("sticky");
-        }
-        else {
-            $('header').removeClass("sticky");
-        }
-    });
-</script>
+{% block basecontent %}
+    <div id="base-container" class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/jquery-1.12.1.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+{% endblock %}
+
 </body>
 </html>

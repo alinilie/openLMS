@@ -1,5 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block content %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/openlmsbase/css/open-lms-index.css') }}">
+{% endblock stylesheets %}
 
+{% block basecontent %}
+    <div id="slider" class="container-fluid">
+        <div id="slider-search-container">
+            <div class="slider-search">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    </div>
 {% endblock %}
