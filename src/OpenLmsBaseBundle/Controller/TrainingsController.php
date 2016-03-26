@@ -4,15 +4,13 @@ namespace OpenLmsBaseBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class TrainingsController extends Controller
 {
     /**
-     * Homepage route
-     *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexAction()
+    public function trainingsAction()
     {
-        return $this->render('OpenLmsBaseBundle:index.html.twig');
+        return $this->render('OpenLmsBaseBundle:trainings.html.twig');
     }
 }

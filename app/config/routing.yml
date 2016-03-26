@@ -1,3 +1,2 @@
 app:
-    resource: "@OpenLmsBaseBundle/Controller/"
-    type:     annotation
+    resource: "@OpenLmsBaseBundle/Resources/config/routing.yml"

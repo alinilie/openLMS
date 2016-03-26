@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap-theme.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/open-lms-base.css') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     {% endblock %}
 </head>
 <body>
@@ -26,9 +27,9 @@
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ path('homepage') }}">Home</a></li>
-                <li><a href="{{ path('homepage') }}">Courses</a></li>
+                <li><a href="{{ path('courses') }}">Courses</a></li>
                 <li class="dropdown">
-                    <a href="{{ path('homepage') }}" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                        aria-haspopup="true"
                        aria-expanded="false">
                         Trainings <span class="caret"></span>

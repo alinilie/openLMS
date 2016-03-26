@@ -1,0 +1,22 @@
+homepage:
+    path: /
+    defaults:
+        _controller: OpenLmsBaseBundle:Default:index
+
+courses:
+    path: /courses
+    defaults:
+        _controller: OpenLmsBaseBundle:Courses:courses
+
+course_instructor_homepage:
+    path: /instructor/{homepageSlug}
+    defaults:
+        _controller: OpenLmsBaseBundle:Courses:courseInstructorHomepage
+    requirements:
+        homepageSlug: "[a-z0-9-]+"
+
+trainings:
+    path: /trainings
+    defaults:
+        _controller: OpenLmsBaseBundle:Trainings:trainings
+

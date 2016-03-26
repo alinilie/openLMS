@@ -1,0 +1,29 @@
+.course-item {
+    float: left;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.course-content {
+    border: ridge thin #cccccc;
+    margin: 0 10px 0 10px;
+}
+
+.course-thim-content {
+    padding: 0 20px;
+}
+
+.course-author {
+    margin-top: -28px;
+}
+
+.course-meta {
+    border-top: ridge thin #cccccc;
+    padding-top: 5px;
+    color: #cccccc;
+}
+
+.course-meta p {
+    margin-right: 10px;
+    display: inline;
+}
